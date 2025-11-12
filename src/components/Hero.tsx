@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
+          src={heroBackground} 
           alt="WinClick - Agência Digital" 
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-20"
         />
       </div>
       
