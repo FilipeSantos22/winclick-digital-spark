@@ -40,7 +40,7 @@ const Header = () => {
               </Button>
             </a>
             <Button variant="hero" size="sm" className="hidden md:inline-flex">
-              Solicitar orçamento
+              Solicitar Orçamento
             </Button>
           </div>
         </div>
