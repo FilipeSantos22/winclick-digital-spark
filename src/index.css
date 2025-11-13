@@ -9,10 +9,10 @@
 @layer base {
   :root {
     /* Cores principais */
-    --primary: 277 75% 58%; /* #A841E6 - Roxo WinClick */
+    --primary: 224 95% 68%; /* #5988FB - Azul WinClick */
     --primary-foreground: 0 0% 100%;
 
-    --secondary:  224 95% 68%; /* #5988FB - Azul WinClick */
+    --secondary: 277 75% 58% ; /* #A841E6 - Roxo WinClick */
     --secondary-foreground: 0 0% 100%;
 
     /* Cores base */
