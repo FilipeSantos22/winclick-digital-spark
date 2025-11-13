@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="space-y-4">
-              <img src={logo} alt="WinClick" className="h-12" />
+              <img src={logo} alt="WinClick" className="h-16 w-auto" />
               <p className="text-background/80 leading-relaxed">
                 Transformando ideias em presença digital que gera resultados.
               </p>
