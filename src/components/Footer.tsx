@@ -1,4 +1,5 @@
 import { Mail, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">
-                Win<span className="text-primary">Click</span>
-              </h3>
+              <img src={logo} alt="WinClick" className="h-12" />
               <p className="text-background/80 leading-relaxed">
                 Transformando ideias em presença digital que gera resultados.
               </p>

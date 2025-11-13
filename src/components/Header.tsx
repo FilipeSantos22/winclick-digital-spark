@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
@@ -7,8 +8,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold">
-              Win<span className="text-primary">Click</span>
+            <a href="/" className="flex items-center">
+              <img src={logo} alt="WinClick" className="h-10" />
             </a>
           </div>
           
