@@ -30,9 +30,9 @@ const Footer = () => {
                   <Mail className="w-5 h-5" />
                   <span>contato@winclick.com.br</span>
                 </a>
-                <a href="https://instagram.com/winclick.ag" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="https://instagram.com/winclick.oficial" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Instagram className="w-5 h-5" />
-                  <span>@winclick.ag</span>
+                  <span>@winclick.oficial</span>
                 </a>
               </div>
             </div>
