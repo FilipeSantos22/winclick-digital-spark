@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* 🎨 Sistema de Design WinClick
+   Todas as cores definidas em HSL
 */
 
 @layer base {
   :root {
+    /* Cores principais */
+    --primary: 224 95% 68%; /* #5988FB - Azul WinClick */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 277 75% 58%; /* #A841E6 - Roxo WinClick */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Cores base */
     --background: 0 0% 100%;
     --foreground: 220 20% 15%;
 
@@ -17,16 +25,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 15%;
 
-    --primary: 224 95% 68%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 277 75% 58%;
-    --secondary-foreground: 0 0% 100%;
-
     --muted: 220 15% 96%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 277 75% 58%;
+    --accent: var(--secondary);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,16 +36,26 @@ All colors MUST be HSL.
 
     --border: 220 15% 90%;
     --input: 220 15% 90%;
-    --ring: 224 95% 68%;
+    --ring: var(--primary);
 
+    /* Estilos adicionais */
     --radius: 0.75rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(224, 95%, 68%), hsl(277, 75%, 58%));
-    --gradient-hero: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(224, 95%, 98%));
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--secondary))
+    );
+
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(0, 0%, 100%),
+      hsl(224, 95%, 98%)
+    );
+
     --shadow-soft: 0 4px 24px -4px hsl(224, 95%, 68%, 0.12);
     --shadow-glow: 0 0 60px hsl(224, 95%, 68%, 0.2);
-    
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -57,6 +69,7 @@ All colors MUST be HSL.
     --popover: 220 20% 12%;
     --popover-foreground: 0 0% 98%;
 
+    /* Mantém as cores WinClick no dark mode */
     --primary: 224 95% 68%;
     --primary-foreground: 0 0% 100%;
 
@@ -66,7 +79,7 @@ All colors MUST be HSL.
     --muted: 220 20% 16%;
     --muted-foreground: 220 10% 65%;
 
-    --accent: 277 75% 58%;
+    --accent: var(--secondary);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -74,7 +87,7 @@ All colors MUST be HSL.
 
     --border: 220 20% 20%;
     --input: 220 20% 20%;
-    --ring: 224 95% 68%;
+    --ring: var(--primary);
   }
 }
 
