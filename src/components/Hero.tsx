@@ -4,12 +4,14 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-20" aria-label="Seção principal do site">
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBackground} 
-          alt="WinClick - Agência Digital" 
+          alt="Agência digital WinClick - Criação de sites profissionais, landing pages e e-commerce em Goiânia" 
           className="w-full h-full object-cover opacity-20"
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
       
@@ -21,11 +23,11 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-            Transformamos ideias em{" "}
+            Criação de Sites Profissionais e{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              presença digital
+              E-commerce em Goiânia
             </span>{" "}
-            que gera resultados.
+            - Agência Digital WinClick
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
@@ -33,10 +35,16 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            <Button variant="hero" size="lg" className="min-w-[200px] group">
-              Solicitar orçamento
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a 
+              href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site." 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="lg" className="min-w-[200px] group">
+                Solicitar orçamento
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

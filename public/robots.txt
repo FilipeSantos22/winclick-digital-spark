@@ -1,8 +1,34 @@
+# robots.txt para WinClick
+# https://winclick.com.br/robots.txt
+
+# Permitir todos os bots de busca principais
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
 
 User-agent: Twitterbot
 Allow: /
@@ -10,5 +36,23 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Regras gerais para outros bots
 User-agent: *
 Allow: /
+Crawl-delay: 2
+
+# Bloquear arquivos e diretórios desnecessários
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig*.json
+
+# Sitemap
+Sitemap: https://winclick.com.br/sitemap.xml

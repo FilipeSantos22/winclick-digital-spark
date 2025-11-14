@@ -1,20 +1,162 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/src/assets/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WinClick - Agência Digital | Sites, Landing Pages e E-commerce</title>
-    <meta name="description" content="Criação de sites institucionais, landing pages e e-commerces com design estratégico e foco em conversão. Transformamos ideias em presença digital que gera resultados." />
-    <meta name="author" content="WinClick" />
+    <meta name="theme-color" content="#00B8FF" />
+    
+    <!-- Primary Meta Tags -->
+    <title>WinClick - Agência Digital | Criação de Sites, Landing Pages e E-commerce em Goiânia</title>
+    <meta name="title" content="WinClick - Agência Digital | Criação de Sites, Landing Pages e E-commerce em Goiânia" />
+    <meta name="description" content="Agência digital em Goiânia especializada em criação de sites institucionais, landing pages e e-commerces. Design estratégico, SEO otimizado e foco em conversão. Transforme sua presença digital com a WinClick!" />
+    <meta name="keywords" content="agência digital goiânia, criação de sites, desenvolvimento web, landing page, e-commerce, loja virtual, site institucional, design web, marketing digital, SEO, conversão, presença digital" />
+    <meta name="author" content="WinClick Digital" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="Portuguese" />
+    <meta name="geo.region" content="BR-GO" />
+    <meta name="geo.placename" content="Goiânia" />
+    <link rel="canonical" href="https://winclick.com.br/" />
 
-    <meta property="og:title" content="WinClick - Agência Digital | Sites, Landing Pages e E-commerce" />
-    <meta property="og:description" content="Criação de sites institucionais, landing pages e e-commerces com design estratégico e foco em conversão." />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://winclick.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="WinClick" />
+    <meta property="og:title" content="WinClick - Agência Digital | Criação de Sites e E-commerce em Goiânia" />
+    <meta property="og:description" content="Agência digital em Goiânia especializada em criação de sites institucionais, landing pages e e-commerces. Design estratégico e foco em conversão." />
+    <meta property="og:image" content="https://winclick.com.br/src/assets/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="WinClick - Agência Digital" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:url" content="https://winclick.com.br/" />
+    <meta name="twitter:title" content="WinClick - Agência Digital | Criação de Sites em Goiânia" />
+    <meta name="twitter:description" content="Agência digital especializada em criação de sites, landing pages e e-commerces com design estratégico e foco em conversão." />
+    <meta name="twitter:image" content="https://winclick.com.br/src/assets/logo.png" />
+    <meta name="twitter:creator" content="@winclick.oficial" />
+
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WinClick",
+      "legalName": "WinClick Digital",
+      "url": "https://winclick.com.br",
+      "logo": "https://winclick.com.br/src/assets/logo.png",
+      "foundingDate": "2024",
+      "description": "Agência digital especializada em criação de sites institucionais, landing pages e e-commerces com design estratégico e foco em conversão.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Goiânia",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-62-99551-3691",
+        "contactType": "customer service",
+        "availableLanguage": ["Portuguese"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/winclick.oficial/"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://winclick.com.br/#localbusiness",
+      "name": "WinClick - Agência Digital",
+      "image": "https://winclick.com.br/src/assets/logo.png",
+      "telephone": "+55-62-99551-3691",
+      "email": "contato@winclick.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Goiânia",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -16.6869,
+        "longitude": -49.2648
+      },
+      "url": "https://winclick.com.br",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-18:00"
+    }
+    </script>
+
+    <!-- Structured Data - WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WinClick",
+      "url": "https://winclick.com.br",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://winclick.com.br/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Criação de Sites e Desenvolvimento Web",
+      "provider": {
+        "@type": "Organization",
+        "name": "WinClick"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Goiânia"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços Digitais",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Site Institucional",
+              "description": "Criação de sites institucionais com presença e credibilidade no digital"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Landing Page",
+              "description": "Páginas otimizadas para captar leads e aumentar conversões"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce",
+              "description": "Lojas virtuais profissionais, rápidas e seguras"
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
 
   <body>

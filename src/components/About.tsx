@@ -20,11 +20,11 @@ const About = () => {
   ];
 
   return (
-    <section id="sobre" className="py-24 bg-background">
+    <section id="sobre" className="py-24 bg-background" aria-labelledby="sobre-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Sobre a <span className="bg-gradient-primary bg-clip-text text-transparent">WinClick</span>
+          <h2 id="sobre-heading" className="text-4xl md:text-5xl font-bold">
+            Sobre a <span className="bg-gradient-primary bg-clip-text text-transparent">WinClick</span> - Agência Digital em Goiânia
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">

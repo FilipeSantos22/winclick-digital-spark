@@ -3,12 +3,12 @@ import logo from "@/assets/logo-fundo-preto-removebg-preview.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground text-background py-12" role="contentinfo" aria-label="Rodapé do site">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="space-y-4">
-              <img src={logo} alt="WinClick" className="h-16 w-auto" />
+              <img src={logo} alt="WinClick - Agência Digital em Goiânia" className="h-16 w-auto" width="64" height="64" loading="lazy" />
               <p className="text-background/80 leading-relaxed">
                 Transformando ideias em presença digital que gera resultados.
               </p>

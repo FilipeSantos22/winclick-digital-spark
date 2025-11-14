@@ -16,13 +16,19 @@ const CTA = () => {
             Fale com a WinClick e descubra como podemos criar o site perfeito para o seu negócio.
           </p>
           
-          <Button 
-            size="lg" 
-            className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-300 text-lg px-8 py-6 h-auto shadow-glow group"
+          <a 
+            href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site." 
+            target="_blank" 
+            rel="noopener noreferrer"
           >
-            Quero meu site profissional
-            <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </Button>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-300 text-lg px-8 py-6 h-auto shadow-glow group mt-3"
+            >
+              Quero meu site profissional
+              <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>

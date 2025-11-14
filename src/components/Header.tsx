@@ -8,8 +8,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <img src={logo} alt="WinClick" className="h-16 w-auto" />
+            <a href="/" className="flex items-center" aria-label="WinClick - Página inicial">
+              <img src={logo} alt="WinClick - Agência Digital" className="h-16 w-auto" width="64" height="64" loading="eager" />
             </a>
           </div>
           
@@ -39,9 +39,15 @@ const Header = () => {
                 <Instagram className="w-5 h-5 text-primary" />
               </Button>
             </a>
-            <Button variant="hero" size="sm" className="hidden md:inline-flex">
-              Solicitar Orçamento
-            </Button>
+            <a 
+              href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site." 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="sm" className="hidden md:inline-flex">
+                Solicitar Orçamento
+              </Button>
+            </a>
           </div>
         </div>
       </div>
