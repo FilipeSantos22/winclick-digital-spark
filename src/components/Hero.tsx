@@ -4,14 +4,12 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-20" aria-label="Seção principal do site">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBackground} 
-          alt="Agência digital WinClick - Criação de sites profissionais, landing pages e e-commerce em Goiânia" 
+          alt="WinClick - Agência Digital" 
           className="w-full h-full object-cover opacity-20"
-          loading="eager"
-          fetchpriority="high"
         />
       </div>
       
@@ -23,11 +21,11 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-            Criação de Sites Profissionais e{" "}
+            Transformamos ideias em{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              E-commerce em Goiânia
+              presença digital
             </span>{" "}
-            - Agência Digital WinClick
+            que gera resultados.
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
