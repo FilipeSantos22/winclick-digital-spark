@@ -1,93 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 🎨 Sistema de Design WinClick
-   Todas as cores definidas em HSL
+/* 🎨 Sistema de Design Premium WinClick
+   Minimalista, Sofisticado, Tecnológico
 */
 
 @layer base {
   :root {
-    /* Cores principais */
-    --primary: 195 100% 50%; /* #00B8FF - Azul WinClick */
+    /* Cores principais - Azul WinClick como primária */
+    --primary: 224 95% 68%; /* #5988FB */
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 224 95% 75%;
 
-    --secondary: 271 80% 60%; /* #9A50E8 - Roxo WinClick */
+    /* Roxo como secundária/accent */
+    --secondary: 277 75% 58%; /* #A841E6 */
     --secondary-foreground: 0 0% 100%;
 
-    /* Cores base */
-    --background: 0 0% 100%;
-    --foreground: 220 20% 15%;
+    /* Cores base - Tons neutros sofisticados */
+    --background: 220 20% 99%;
+    --foreground: 220 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 220 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 220 25% 10%;
 
     --muted: 220 15% 96%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: var(--secondary);
+    --accent: 277 75% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: var(--primary);
+    --border: 220 15% 92%;
+    --input: 220 15% 92%;
+    --ring: 224 95% 68%;
 
-    /* Estilos adicionais */
+    /* Radius suave */
     --radius: 0.75rem;
 
+    /* Gradientes premium */
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary))
+      hsl(224, 95%, 68%) 0%,
+      hsl(277, 75%, 58%) 100%
     );
 
     --gradient-hero: linear-gradient(
       180deg,
-      hsl(0, 0%, 100%),
-      hsl(224, 95%, 98%)
+      hsl(220, 20%, 99%) 0%,
+      hsl(220, 30%, 97%) 100%
     );
 
-    --shadow-soft: 0 4px 24px -4px hsl(224, 95%, 68%, 0.12);
-    --shadow-glow: 0 0 60px hsl(224, 95%, 68%, 0.2);
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(220, 20%, 98%) 0%,
+      hsl(220, 20%, 100%) 100%
+    );
 
+    --gradient-glow: radial-gradient(
+      ellipse at center,
+      hsl(224, 95%, 68%, 0.15) 0%,
+      transparent 70%
+    );
+
+    /* Sombras sofisticadas */
+    --shadow-sm: 0 1px 2px 0 hsl(220, 25%, 10%, 0.03);
+    --shadow-soft: 0 4px 24px -4px hsl(220, 25%, 10%, 0.08);
+    --shadow-medium: 0 8px 32px -8px hsl(220, 25%, 10%, 0.12);
+    --shadow-glow: 0 8px 40px -8px hsl(224, 95%, 68%, 0.25);
+    --shadow-glow-strong: 0 12px 48px -8px hsl(224, 95%, 68%, 0.35);
+
+    /* Transições suaves */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 220 25% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 220 20% 12%;
+    --card: 220 20% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 20% 12%;
+    --popover: 220 20% 10%;
     --popover-foreground: 0 0% 98%;
 
-    /* Mantém as cores WinClick no dark mode */
     --primary: 224 95% 68%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 277 75% 58%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 20% 16%;
+    --muted: 220 20% 14%;
     --muted-foreground: 220 10% 65%;
 
-    --accent: var(--secondary);
+    --accent: 277 75% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: var(--primary);
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 224 95% 68%;
   }
 }
 
@@ -96,7 +119,190 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Tipografia refinada */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Animações de scroll reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Cards premium */
+  .card-premium {
+    @apply bg-card rounded-2xl border border-border/50 p-8;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-background/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Grid animado para hero */
+  .hero-grid {
+    background-image: 
+      linear-gradient(hsl(224, 95%, 68%, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(224, 95%, 68%, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  @keyframes grid-move {
+    0% {
+      transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+    100% {
+      transform: perspective(500px) rotateX(60deg) translateY(60px);
+    }
+  }
+
+  /* Glow orbs */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05);
+    }
+  }
+
+  /* Link underline animation */
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: hsl(var(--primary));
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply py-24 md:py-32;
+  }
+
+  /* Stagger delay utilities */
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+}
+
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Premium hover scale */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
   }
 }
