@@ -38,10 +38,16 @@ const Hero = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button variant="hero" size="lg" className="min-w-[200px] group">
-                Solicitar orçamento
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+
+                <Button variant="hero" size="lg" className="min-w-[200px] group">
+                  Solicitar orçamento
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" size="lg" className="min-w-[200px]">
+                  Ver portfólio
+                </Button>
+              </div>
             </a>
           </div>
         </div>

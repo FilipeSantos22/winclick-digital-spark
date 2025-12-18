@@ -1,5 +1,6 @@
 import { Building2, Megaphone, ShoppingCart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
@@ -7,19 +8,22 @@ const Services = () => {
       icon: Building2,
       title: "Site Institucional",
       description: "Sua marca com presença e credibilidade no digital.",
-      color: "from-primary to-primary/80"
+      color: "from-primary to-primary/80",
+      whatsappMessage: "Olá, vim da WinClick e gostaria de um Site Institucional."
     },
     {
       icon: Megaphone,
       title: "Landing Page Estratégica",
       description: "Páginas otimizadas para captar leads e aumentar conversões.",
-      color: "from-secondary to-secondary/80"
+      color: "from-secondary to-secondary/80",
+      whatsappMessage: "Olá, vim da WinClick e gostaria de uma Landing Page."
     },
     {
       icon: ShoppingCart,
-      title: "E-commerce Personalizado",
+      title: "Site E-commerce",
       description: "Venda seus produtos online com estrutura rápida, segura e profissional.",
-      color: "from-primary to-secondary"
+      color: "from-primary to-secondary",
+      whatsappMessage: "Olá, vim da WinClick e gostaria de um Site E-commerce."
     }
   ];
 
@@ -51,6 +55,16 @@ const Services = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
+                <a 
+                  href={`https://wa.me/5562995513691?text=${encodeURIComponent(service.whatsappMessage)}`}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block pt-2"
+                >
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
+                    Saiba Mais
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
