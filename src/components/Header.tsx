@@ -1,5 +1,6 @@
 import { Instagram, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "./NavLink";
 import logo from "@/assets/logo-fundo-preto-removebg-preview.png";
 import { useState, useEffect } from "react";
 
@@ -16,10 +17,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: "#sobre", label: "Sobre" },
-    { href: "#servicos", label: "Serviços" },
-    { href: "#depoimentos", label: "Depoimentos" },
-    { href: "#contato", label: "Contato" },
+    { to: "/", label: "Home" },
+    { to: "/sobre", label: "Sobre" },
+    { to: "/servicos", label: "Serviços" },
+    { to: "/cases", label: "Cases" },
+    { to: "/contato", label: "Contato" },
   ];
 
   return (
@@ -33,24 +35,25 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center" aria-label="WinClick - Página inicial">
+          <NavLink to="/" className="flex items-center" aria-label="WinClick - Página inicial">
             <img 
               src={logo} 
               alt="WinClick" 
               className="h-14 w-auto transition-transform hover:scale-105" 
             />
-          </a>
+          </NavLink>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a 
-                key={link.href}
-                href={link.href} 
+              <NavLink 
+                key={link.to}
+                to={link.to} 
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-lg hover:bg-primary/5"
+                activeClassName="text-primary bg-primary/5"
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
           
@@ -100,14 +103,15 @@ const Header = () => {
       >
         <nav className="container mx-auto px-4 py-6 space-y-2">
           {navLinks.map((link) => (
-            <a 
-              key={link.href}
-              href={link.href} 
+            <NavLink 
+              key={link.to}
+              to={link.to} 
               className="block px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+              activeClassName="text-primary bg-primary/5"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
           <div className="pt-4">
             <a 

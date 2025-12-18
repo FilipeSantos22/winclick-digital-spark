@@ -4,21 +4,18 @@ import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <Layout>
       <Hero />
       <About />
       <Services />
       <Benefits />
       <Testimonials />
       <CTA />
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -56,39 +57,42 @@ const Hero = () => {
           </p>
           
           {/* CTAs */}
-          <div 
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 opacity-0 animate-fade-in-up"
             style={{ animationDelay: '0.6s' }}
           >
-            <a 
-              href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site." 
-              target="_blank" 
+            <motion.a
+              href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site."
+              target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ y: -4, scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              className="block"
             >
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-
-                <Button variant="hero" size="lg" className="min-w-[200px] group">
-                  Solicitar orçamento
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg" className="min-w-[200px]">
-                  Ver portfólio
-                </Button>
-              </div>
-=======
               <Button variant="hero" size="lg" className="min-w-[220px] h-14 text-base group">
                 Solicitar orçamento
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
->>>>>>> c9da2ff9942a66a1f4ffa6e8e45921972d6eb538
-            </a>
-            <a href="#servicos">
-              <Button variant="outline" size="lg" className="min-w-[180px] h-14 text-base group bg-background/50 backdrop-blur-sm hover:bg-background">
+            </motion.a>
+
+            <motion.a
+              href="/servicos"
+              whileHover={{ y: -3, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 250 }}
+              className="block"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="min-w-[180px] h-14 text-base group bg-background/50 backdrop-blur-sm text-foreground transition-transform duration-200"
+                aria-label="Ver serviços"
+              >
                 <Play className="w-4 h-4 mr-2" />
                 Ver serviços
               </Button>
-            </a>
+            </motion.a>
           </div>
           
           {/* Trust indicators */}
