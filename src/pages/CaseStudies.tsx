@@ -9,93 +9,52 @@ const CaseStudies = () => {
   const cases = [
     {
       id: 1,
-      title: "E-commerce de Moda Premium",
-      client: "Boutique Elegance",
-      category: "E-commerce",
-      description: "Desenvolvimento completo de loja virtual com integração de pagamentos, gestão de estoque e painel administrativo.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+      title: "Landing Page Exclusiva",
+      client: "MIF - Winx Digital",
+      category: "Landing Page",
+      description: "Página de alta conversão desenvolvida com foco em performance e resultados para maximizar a captação de leads.",
+      image: "/mif-landing.png",
+      className: "object-top",
       results: [
-        { icon: TrendingUp, label: "Aumento de vendas", value: "+180%" },
-        { icon: Users, label: "Novos clientes", value: "+2.5k" },
-        { icon: Clock, label: "Tempo de projeto", value: "8 semanas" }
+        { icon: TrendingUp, label: "Taxa de conversão", value: "+45%" },
+        { icon: Users, label: "Leads/mês", value: "1.2k+" },
+        { icon: Clock, label: "Entrega", value: "1 semana" }
       ],
-      tags: ["E-commerce", "Design", "SEO"],
-      color: "from-purple-500 to-pink-500"
+      tags: ["Landing Page", "Performance", "Marketing"],
+      color: "from-purple-500 to-pink-500",
+      link: "https://mif.winxdigital.com.br"
     },
     {
       id: 2,
-      title: "Site Institucional para Consultoria",
-      client: "Consultoria Estratégica Pro",
-      category: "Site Institucional",
-      description: "Website corporativo moderno com blog integrado, área de clientes e sistema de agendamento online.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      title: "E-commerce Premium",
+      client: "Elite Time",
+      category: "E-commerce",
+      description: "Loja virtual sofisticada com experiência de compra otimizada, gestão de estoque e pagamentos integrados.",
+      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop",
       results: [
-        { icon: TrendingUp, label: "Aumento de leads", value: "+250%" },
-        { icon: Users, label: "Visitantes/mês", value: "12k+" },
-        { icon: Clock, label: "Tempo de projeto", value: "6 semanas" }
+        { icon: TrendingUp, label: "Aumento de vendas", value: "+120%" },
+        { icon: Users, label: "Usuários ativos", value: "5k+" },
+        { icon: Clock, label: "Entrega", value: "4 semanas" }
       ],
-      tags: ["Institucional", "Blog", "CRM"],
-      color: "from-blue-500 to-cyan-500"
+      tags: ["E-commerce", "Vendas", "Design"],
+      color: "from-blue-500 to-cyan-500",
+      link: "https://elitetime.net.br"
     },
     {
       id: 3,
-      title: "Landing Page para Lançamento",
-      client: "TechStart Innovation",
-      category: "Landing Page",
-      description: "Landing page de alta conversão para lançamento de produto SaaS com integração de email marketing.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      title: "Portal Corporativo",
+      client: "Vertex Solutions",
+      category: "Site Institucional",
+      description: "Website institucional moderno projetado para fortalecer a autoridade da marca e apresentar serviços.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
       results: [
-        { icon: TrendingUp, label: "Taxa de conversão", value: "42%" },
-        { icon: Users, label: "Leads capturados", value: "5.8k" },
-        { icon: Clock, label: "Tempo de projeto", value: "3 semanas" }
+        { icon: TrendingUp, label: "Engajamento", value: "+85%" },
+        { icon: Users, label: "Visitas", value: "10k+" },
+        { icon: Clock, label: "Entrega", value: "3 semanas" }
       ],
-      tags: ["Landing Page", "SaaS", "Marketing"],
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      id: 4,
-      title: "Marketplace de Serviços Locais",
-      client: "ServiçoJá",
-      category: "Plataforma",
-      description: "Plataforma completa conectando prestadores de serviços e clientes com sistema de avaliações e pagamentos.",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
-      results: [
-        { icon: TrendingUp, label: "Transações/mês", value: "1.2k+" },
-        { icon: Users, label: "Usuários ativos", value: "8.5k" },
-        { icon: Clock, label: "Tempo de projeto", value: "12 semanas" }
-      ],
-      tags: ["Marketplace", "Plataforma", "Mobile"],
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      id: 5,
-      title: "Portal de Notícias Regional",
-      client: "Notícias GO",
-      category: "Portal",
-      description: "Portal de notícias com CMS customizado, área de assinantes e sistema de publicidade programática.",
-      image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=600&fit=crop",
-      results: [
-        { icon: TrendingUp, label: "Pageviews/mês", value: "850k+" },
-        { icon: Users, label: "Assinantes", value: "3.2k" },
-        { icon: Clock, label: "Tempo de projeto", value: "10 semanas" }
-      ],
-      tags: ["Portal", "CMS", "Notícias"],
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      id: 6,
-      title: "App de Delivery Personalizado",
-      client: "Sabor Express",
-      category: "Aplicativo",
-      description: "Aplicativo mobile e web para delivery de restaurantes com gestão de pedidos em tempo real.",
-      image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&h=600&fit=crop",
-      results: [
-        { icon: TrendingUp, label: "Pedidos/dia", value: "450+" },
-        { icon: Users, label: "Downloads", value: "15k+" },
-        { icon: Clock, label: "Tempo de projeto", value: "14 semanas" }
-      ],
-      tags: ["App Mobile", "Delivery", "Real-time"],
-      color: "from-yellow-500 to-orange-500"
+      tags: ["Institucional", "Branding", "Corporativo"],
+      color: "from-emerald-500 to-green-500",
+      link: null
     }
   ];
 
@@ -142,17 +101,17 @@ const CaseStudies = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
           >
             {cases.map((caseItem, index) => (
               <motion.div key={caseItem.id} variants={fadeInUp}>
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden group">
+                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden group flex flex-col">
                   <div className="relative h-48 overflow-hidden">
                     <div className={`absolute inset-0 bg-gradient-to-br ${caseItem.color} opacity-90`} />
-                    <img 
-                      src={caseItem.image} 
+                    <img
+                      src={caseItem.image}
                       alt={caseItem.title}
-                      className="w-full h-full object-cover mix-blend-overlay"
+                      className={`w-full h-full object-cover mix-blend-overlay ${caseItem.className || ""}`}
                     />
                     <div className="absolute top-4 left-4">
                       <Badge variant="secondary" className="bg-white/90 text-foreground">
@@ -160,7 +119,7 @@ const CaseStudies = () => {
                       </Badge>
                     </div>
                   </div>
-                  
+
                   <CardHeader>
                     <CardTitle className="text-2xl mb-2">{caseItem.title}</CardTitle>
                     <CardDescription className="text-base">
@@ -170,8 +129,8 @@ const CaseStudies = () => {
                       {caseItem.description}
                     </p>
                   </CardHeader>
-                  
-                  <CardContent>
+
+                  <CardContent className="mt-auto">
                     <div className="space-y-4 mb-6">
                       {caseItem.results.map((result, idx) => (
                         <div key={idx} className="flex items-center gap-3">
@@ -194,10 +153,23 @@ const CaseStudies = () => {
                       ))}
                     </div>
 
-                    <Button variant="outline" className="w-full group/btn">
-                      Ver Detalhes
-                      <ExternalLink className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
+                    {caseItem.link ? (
+                      <a
+                        href={caseItem.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full"
+                      >
+                        <Button variant="outline" className="w-full group/btn">
+                          Ver Projeto Online
+                          <ExternalLink className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button variant="outline" className="w-full group/btn cursor-default opacity-80 hover:bg-background hover:text-foreground">
+                        Projeto Confidencial
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
@@ -256,9 +228,9 @@ const CaseStudies = () => {
               Vamos conversar sobre como transformar sua ideia em realidade e gerar resultados excepcionais.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/5562995513691?text=Olá,%20vi%20os%20cases%20e%20gostaria%20de%20um%20orçamento." 
-                target="_blank" 
+              <a
+                href="https://wa.me/5562995513691?text=Olá,%20vi%20os%20cases%20e%20gostaria%20de%20um%20orçamento."
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button size="lg" className="w-full sm:w-auto">
