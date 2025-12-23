@@ -7,6 +7,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Layout from "@/components/Layout";
 import { useState } from "react";
 
+import emailjs from '@emailjs/browser';
+import { toast } from "sonner";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -14,12 +17,38 @@ const Contact = () => {
     phone: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = `Olá! Meu nome é ${formData.name}.\n\nEmail: ${formData.email}\nTelefone: ${formData.phone}\n\nMensagem: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/5562995513691?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, '_blank');
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          to_name: "Winclick",
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success("Mensagem enviada com sucesso!", {
+        description: "Entraremos em contato em breve."
+      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      toast.error("Erro ao enviar mensagem", {
+        description: "Verifique se as chaves do EmailJS estão configuradas corretamente no arquivo .env"
+      });
+      console.error("EmailJS error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -154,9 +183,14 @@ const Contact = () => {
                         />
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full group">
-                        Enviar Mensagem
-                        <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full group"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+                        {!isSubmitting && <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />}
                       </Button>
                     </form>
                   </CardContent>
