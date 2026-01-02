@@ -15,19 +15,20 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['framer-motion'],
+  },
   build: {
+    target: 'esnext',
     rollupOptions: {
       output: {
-        // manualChunks removido para evitar problemas de build
+        manualChunks: undefined,
       },
     },
     chunkSizeWarningLimit: 1000,
     sourcemap: mode === 'development',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: mode === 'production',
-      },
-    },
+  },
+  esbuild: {
+    drop: mode === 'production' ? ['console', 'debugger'] : [],
   },
 }));
