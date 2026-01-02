@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { 
-  Globe, 
-  ShoppingCart, 
-  Search, 
-  Megaphone, 
+import {
+  Globe,
+  ShoppingCart,
+  Search,
+  Megaphone,
   Smartphone,
   BarChart3,
   CheckCircle2,
@@ -12,6 +12,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
+import { usePageTracking } from "@/lib/analytics";
 
 const Services = () => {
   const services = [
@@ -63,7 +65,7 @@ const Services = () => {
       ],
       color: "from-green-500 to-emerald-500"
     },
-    
+
   ];
 
   const fadeInUp = {
@@ -198,9 +200,9 @@ const Services = () => {
             <p className="mb-8 text-lg opacity-90">
               Entre em contato e receba uma proposta personalizada para suas necessidades.
             </p>
-            <a 
-              href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20orçamento." 
-              target="_blank" 
+            <a
+              href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20orçamento."
+              target="_blank"
               rel="noopener noreferrer"
             >
               <Button size="lg" variant="secondary" className="group">

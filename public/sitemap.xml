@@ -1,46 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
     <loc>https://winclick.com.br/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Sobre Section -->
+  
+  <!-- Sobre -->
   <url>
-    <loc>https://winclick.com.br/#sobre</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://winclick.com.br/sobre</loc>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Serviços Section -->
+  
+  <!-- Serviços -->
   <url>
-    <loc>https://winclick.com.br/#servicos</loc>
-    <lastmod>2025-11-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://winclick.com.br/servicos</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Depoimentos Section -->
+  
+  <!-- Serviço: Site Institucional -->
   <url>
-    <loc>https://winclick.com.br/#depoimentos</loc>
-    <lastmod>2025-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contato Section -->
-  <url>
-    <loc>https://winclick.com.br/#contato</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://winclick.com.br/servicos/site-institucional</loc>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
+  <!-- Serviço: E-commerce -->
+  <url>
+    <loc>https://winclick.com.br/servicos/e-commerce</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Serviço: Landing Pages -->
+  <url>
+    <loc>https://winclick.com.br/servicos/landing-pages</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Serviço: SEO & Performance -->
+  <url>
+    <loc>https://winclick.com.br/servicos/seo-performance</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Cases -->
+  <url>
+    <loc>https://winclick.com.br/cases</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contato -->
+  <url>
+    <loc>https://winclick.com.br/contato</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

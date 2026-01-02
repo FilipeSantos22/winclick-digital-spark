@@ -6,11 +6,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import { useState } from "react";
-
 import emailjs from '@emailjs/browser';
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
+import { usePageTracking, trackFormSubmit } from "@/lib/analytics";
+
 
 const Contact = () => {
+  usePageTracking();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,6 +41,7 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
+      trackFormSubmit('contact_form');
       toast.success("Mensagem enviada com sucesso!", {
         description: "Entraremos em contato em breve."
       });
@@ -86,6 +91,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contato - WinClick | Agência Digital em Goiânia"
+        description="Entre em contato com a WinClick. Estamos prontos para transformar suas ideias em realidade digital. Fale conosco!"
+        canonical="/contato"
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">

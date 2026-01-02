@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
+import { usePageTracking } from "@/lib/analytics";
 
 const CaseStudies = () => {
+  usePageTracking();
   const cases = [
     {
       id: 1,
@@ -74,6 +77,11 @@ const CaseStudies = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Cases de Sucesso | WinClick Agência Digital"
+        description="Veja como transformamos negócios com estratégias digitais, sites de alta conversão e e-commerces que vendem. Confira nossos cases."
+        canonical="/cases"
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">

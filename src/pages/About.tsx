@@ -3,8 +3,13 @@ import { Target, Users, Award, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
+import { usePageTracking } from "@/lib/analytics";
+
 
 const About = () => {
+  usePageTracking();
+
   const values = [
     {
       icon: Target,
@@ -44,6 +49,11 @@ const About = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Sobre a WinClick - Agência Digital em Goiânia"
+        description="Conheça a WinClick, agência digital especializada em transformar ideias em presença digital que gera resultados reais para seu negócio."
+        canonical="/sobre"
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
@@ -150,9 +160,9 @@ const About = () => {
               Vamos conversar sobre como podemos impulsionar sua presença digital e gerar resultados reais para sua empresa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site." 
-                target="_blank" 
+              <a
+                href="https://wa.me/5562995513691?text=Olá,%20vim%20da%20WinClick%20e%20gostaria%20de%20um%20novo%20site."
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button size="lg" className="w-full sm:w-auto">
