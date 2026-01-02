@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { config } from "@/config";
 
 // Ícone oficial do WhatsApp
 const WhatsAppIcon = () => (
@@ -12,7 +13,7 @@ const WhatsAppIcon = () => (
 );
 
 const WhatsAppButton = () => {
-    const whatsappNumber = "5562995513691";
+    const whatsappNumber = config.whatsapp.number;
     const message = "Olá, vim da WinClick e gostaria de mais informações.";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

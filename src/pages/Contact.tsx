@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Layout from "@/components/Layout";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { config } from "@/config";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
 import { usePageTracking, trackFormSubmit } from "@/lib/analytics";
@@ -29,8 +30,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        config.emailjs.serviceId,
+        config.emailjs.templateId,
         {
           to_name: "Winclick",
           from_name: formData.name,
@@ -38,7 +39,7 @@ const Contact = () => {
           phone: formData.phone,
           message: formData.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        config.emailjs.publicKey
       );
 
       trackFormSubmit('contact_form');
@@ -48,7 +49,7 @@ const Contact = () => {
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       toast.error("Erro ao enviar mensagem", {
-        description: "Verifique se as chaves do EmailJS estão configuradas corretamente no arquivo .env"
+        description: "Verifique se as chaves do EmailJS estão configuradas corretamente no arquivo config.ts"
       });
       console.error("EmailJS error:", error);
     } finally {
@@ -172,9 +173,28 @@ const Contact = () => {
                         <Input
                           id="phone"
                           type="tel"
-                          placeholder="(00) 00000-0000"
+                          placeholder="(62) 9 9999-9999"
                           value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          maxLength={16}
+                          onChange={(e) => {
+                            let value = e.target.value.replace(/\D/g, "");
+                            if (value.length > 11) value = value.slice(0, 11);
+
+                            if (value.length > 0) {
+                              value = `(${value}`;
+                              if (value.length > 3) {
+                                value = `${value.slice(0, 3)}) ${value.slice(3)}`;
+                              }
+                              if (value.length > 6) {
+                                value = `${value.slice(0, 6)} ${value.slice(6)}`;
+                              }
+                              if (value.length > 11) {
+                                value = `${value.slice(0, 11)}-${value.slice(11)}`;
+                              }
+                            }
+
+                            setFormData({ ...formData, phone: value });
+                          }}
                           className="w-full"
                         />
                       </div>

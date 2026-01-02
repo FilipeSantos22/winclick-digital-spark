@@ -7,7 +7,9 @@ declare global {
     }
 }
 
-export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || '';
+import { config } from '../config';
+
+export const GA_MEASUREMENT_ID = config.analytics.measurementId;
 
 // Inicializar Google Analytics
 export const initGA = () => {
